@@ -1,0 +1,16 @@
+<div class="admin-container">
+<h1>Admin Page</h1>
+<form>
+  <input ng-model="name" placeholder="product name">
+  <input ng-model="description" placeholder="description">
+  <input ng-model="price" placeholder="price - number(no $)">
+  <button ng-click="postProducts(name, description, price)">Add New Product</button>
+</form>
+<div class="product" ng-repeat="product in products">
+  <h2>Product: <input type="text" ng-model="product.name"></h2>
+  <h2>Description: <input type="text" ng-model="product.description"></h2>
+  <h2>Price: $<input type="text" ng-model="product.price"></h2>
+  <button type="button" ng-click="changeProducts(product)">Apply Change(s)</button>
+  <button type="button" ng-click="deleteProducts(product)">Delete</button>
+</div>
+</div>
